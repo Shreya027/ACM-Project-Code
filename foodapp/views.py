@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from food.forms import ContactForm,ListForm,UserForm
+from food.forms import ProjectForm
 from django.http import HttpResponse
-from foodapp.models import Place,List,Country
+from foodapp.models import Project
 from django.template import RequestContext
 from django.shortcuts import render_to_response
 from django.http import HttpResponseRedirect, HttpResponse
@@ -22,25 +22,25 @@ def search(request):
         elif len(q) > 20:
             errors.append('Please enter at most 20 characters.')
         else:
-            travel = Place.objects.filter(name__icontains=q)
-            return render(request, 'search_results.html',
+            travel = Project.objects.filter(name__icontains=q)
+            return render(request, 'display.html',
                           {'travel': travel, 'query': q})
 
-    full=Place.objects.all()
-    return render(request, 'search_form.html',
+    full=Project.objects.all()
+    return render(request, 'list.html',
                   {'errors': errors,'full':full})
 
 def contact(request):
     if request.method == 'POST':
-        form = ContactForm(request.POST ,request.FILES or None )
+        form = ProjectForm(request.POST ,request.FILES or None )
         if form.is_valid():
             cd = form.cleaned_data
-            Place.objects.create(name=cd['name'],location=cd['location'],notes=cd['notes'],image=request.FILES['image'])
-        form = ContactForm()
-        return render(request,'contact_form.html',{'form': form})
+            Project.objects.create(name=cd['name'],location=cd['location'],notes=cd['notes'],image=request.FILES['image'])
+        form = ProjectForm()
+        return render(request,'submit.html',{'form': form})
     else:
-        form = ContactForm()
-    return render(request, 'contact_form.html', {'form': form})
+        form = ProjectForm()
+    return render(request, 'submit.html', {'form': form})
 
 
 

@@ -5,18 +5,11 @@ from django.contrib import admin
 # Register your models here.
 
 
-from .models import Place,List,Country
-
-class PlaceAdmin(admin.ModelAdmin):
-    list_display = ('name', 'location')
+from .models import Project
 
 
 
-admin.site.register(Place,PlaceAdmin)
-
-admin.site.register(List)
-
-admin.site.register(Country)
+admin.site.register(Project)
 
 
 
