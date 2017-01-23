@@ -27,7 +27,6 @@
 
   <body>
 
-    <!-- Fixed navbar -->
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -36,16 +35,20 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">SP<i class="fa fa-circle"></i>T</a>
+          <a class="navbar-brand" href="#">SVKM</a>
         </div>
         <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-center">
             <li><a href="index.html">HOME</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-            <li class="active"><a href="services.html">SERVICES</a></li>
-            <li><a href="works.html">WORKS</a></li>
+            <li class="active"><a href="services.html">UPLOAD</a></li>
+            <li><a href="works.html">VIEW</a></li>
             <li><a data-toggle="modal" data-target="#myModal" href="#myModal"><i class="fa fa-envelope-o"></i></a></li>
+             
           </ul>
+          <div class = "nav navbar-nav navbar-right" style = "padding-top: 15px">
+            <input class = "search-text" type = text width = 250px>&nbsp&nbsp&nbsp
+        	<i class = "fa fa-search"></i>
+        </div>
         </div><!--/.nav-collapse -->
       </div>
     </div>
@@ -103,6 +106,13 @@
   <div class="form-group row">
   <label for="comment" class="col-2 col-form-label">Project Summary</label>
   <textarea class="form-control" rows="5" id="comment"></textarea>
+</div>
+<br>
+<div class="form-group row">
+  <label for="example-date-input" class="col-2 col-form-label">Date</label>
+  <div class="col-10">
+    <input class="form-control" type="date"  placeholder="24-01-2017"id="example-date-input">
+  </div>
 </div>
 
 
