@@ -95,7 +95,7 @@ a:after {
 }
 
 .navbar-inverse .navbar-nav > .active > a {
-	background: #ff7878
+	background-color:rgb(52,152,219);
 }
 
 .navbar-inverse .navbar-brand {
