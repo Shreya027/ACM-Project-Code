@@ -30,7 +30,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: "Raleway";
     font-weight: 300;
-    color: #333;
+    color: #595959;
 }
 
 
@@ -205,18 +205,18 @@ a:after {
 
 /* Red Wrap */
 #r {
-	background: #ff7878;
+	background: #bedff3;
 	padding-top: 35px;
 	padding-bottom: 35px;
 }
 
 #r h4 {
-	color: white;
+	color: #595959;
 	font-weight: 700;
 }
 
 #r p {
-	color: white;
+	color: #595959;
 }
 
 /* Blue Wrap */
